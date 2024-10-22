@@ -25,6 +25,9 @@ app.use("/movie", movieRoutes);
 
 //seed route
 app.get('/seed', async (req, res) => {
+
+  //delete options
+  await Movie.deleteMany({})
   //create movie in db
   await Movie.create(movie)
   res.send('Seeding database')
