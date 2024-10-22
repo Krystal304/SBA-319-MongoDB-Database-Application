@@ -4,6 +4,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import connectDB from './db/conn.mjs';
+import movieRoutes from './routes/movieRoutes.mjs';
 
 
 //setup
@@ -19,6 +20,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json({extended: true}));
 
 //routes
+app.use('/movie', movieRoutes)
 
 //listener
 
