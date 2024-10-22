@@ -5,6 +5,8 @@ import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import connectDB from "./db/conn.mjs";
 import movieRoutes from "./routes/movieRoutes.mjs";
+import { movie } from "./data/data.mjs";
+import Movie from './model/movieSchema.mjs'
 
 //setup
 const app = express();
@@ -20,6 +22,14 @@ app.use(bodyParser.json({ extended: true }));
 
 //routes
 app.use("/movie", movieRoutes);
+
+//seed route
+app.get('/seed', async (req, res) => {
+  //create movie in db
+  await Movie.create(movie)
+  res.send('Seeding database')
+
+});
 
 //listener
 
