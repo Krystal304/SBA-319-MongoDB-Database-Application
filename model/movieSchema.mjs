@@ -6,11 +6,11 @@ import mongoose from "mongoose";
 const movieSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: true,
+    required: true, //validation
   },
   genre: {
     type: String,
-    require: true,
+    require: true, //validation
   },
   year: {
     type: Number,
@@ -18,7 +18,7 @@ const movieSchema = new mongoose.Schema({
 });
 
 //creating an index
-movieSchema.index({name:1})
+movieSchema.index({title:1})
 
 
 

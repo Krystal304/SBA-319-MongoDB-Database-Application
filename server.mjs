@@ -6,7 +6,9 @@ import bodyParser from "body-parser";
 import connectDB from "./db/conn.mjs";
 import movieRoutes from "./routes/movieRoutes.mjs";
 import { movie } from "./data/data.mjs";
-import Movie from './model/movieSchema.mjs'
+import Movie from './model/movieSchema.mjs';
+import User from './model/userSchema.mjs';
+import Review from './model/reviewSchema.mjs';
 
 //setup
 const app = express();
@@ -28,7 +30,7 @@ app.get('/seed', async (req, res) => {
 
   //delete options
   await Movie.deleteMany({})
-  //create movie in db
+  //create movies in db
   await Movie.create(movie)
   res.send('Seeding database')
 

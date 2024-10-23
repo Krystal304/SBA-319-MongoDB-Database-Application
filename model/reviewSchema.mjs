@@ -13,4 +13,4 @@ const reviewSchema = new mongoose.Schema({
   export default mongoose.model("Review", reviewSchema);
 
   //creating an index
-reviewSchema.index({name:1})
+reviewSchema.index({title:1})
