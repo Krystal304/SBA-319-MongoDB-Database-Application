@@ -1,5 +1,5 @@
 # Kay's Movie Lookup
-A new website for movie lovers of all ages. Built to showcase my knowledge of Mongoose while studying software engineering at Per Scholas
+A new website for movie lovers of all ages. Built to showcase my knowledge of Mongoose while studying software engineering at Per Scholas.git
 
 ### API Reference
 VERB                |           PATH    |   DESCRIPTION
